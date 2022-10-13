@@ -1,7 +1,6 @@
 package httpclient
 
 import (
-	"fmt"
 	"io"
 	"net/http"
 	"strconv"
@@ -65,8 +64,6 @@ func (h *HttpClient) Request(
 	if err != nil {
 		return err
 	}
-
-	fmt.Println(response.Header)
 
 	responseData.SetHeaders(
 		getHeaderAsFloat(response.Header, "X-DL-units"),
